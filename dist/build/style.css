@@ -441,8 +441,8 @@ a:focus-visible {
     width: 25%;
     rotate: -5deg;
     position: absolute;
-    bottom: 12rem;
-    padding-right: 20rem;
+    bottom: 15rem;
+    padding-right: 60rem;
 }
 @media screen and (min-width: 53em) {
     .header {
