@@ -39,9 +39,6 @@ module.exports =
         filename: 'bundle.js',
         path: __dirname + '/dist/build',
     },
-    devServer: {
-        static: path.resolve(__dirname, '/dist/build'),
-    },
     plugins:
             [
                 new CopyPlugin({

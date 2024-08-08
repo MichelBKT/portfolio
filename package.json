@@ -2,6 +2,9 @@
   "name": "onscrollportfolio",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "20.x"
+  },
   "main": "dist/build/bundle.js",
   "private": true,
   "dependencies": {
