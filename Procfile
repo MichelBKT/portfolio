@@ -1,1 +1,1 @@
-web: npm start dist/build
+web: npm start dist/
