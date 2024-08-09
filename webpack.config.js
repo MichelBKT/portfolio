@@ -43,11 +43,11 @@ module.exports =
                 new CopyPlugin({
                 patterns: [
                     {
-                        from: "images",
+                        from: "./images",
                         to: "./images/[path][name][ext]",
                     },
                     {
-                        from: "fonts",
+                        from: "./fonts",
                         to: "./fonts/[path][name][ext]",
                     },
                     {
