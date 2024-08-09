@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'AlphaLyrae';
-    src: url('../fonts/AlphaLyrae-Medium.woff2') format('woff2'),
-    url('../fonts/AlphaLyrae-Medium.woff') format('woff');
+    src: url('fonts/AlphaLyrae-Medium.woff2') format('woff2'),
+    url('fonts/AlphaLyrae-Medium.woff') format('woff');
     font-style: normal;
 }
 
