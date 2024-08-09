@@ -1,6 +1,6 @@
 import {preloadImages, year} from "./utils.js";
 import  InteractiveTilt  from './interactive-tilt.js';
-import '/dist/build/style.css';
+import 'dist/build/style.css';
 import Splitting from "splitting/dist/splitting-lite.js";
 import Lenis from "lenis";
 import gsap from "gsap";
