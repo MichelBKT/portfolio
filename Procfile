@@ -1,1 +1,1 @@
-web: node dist/build/bundle.js
+web: npm start
