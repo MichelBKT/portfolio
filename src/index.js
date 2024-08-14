@@ -515,8 +515,7 @@ const scroll = () => {
         },
         {
             id: '#item-4',
-            animationProfile: fx4,
-            interactiveTilt: true, // This item should have the InteractiveTilt effect
+            animationProfile: fx4, // This item should have the InteractiveTilt effect
             options: {
                 clipPaths: {
                     step1: {

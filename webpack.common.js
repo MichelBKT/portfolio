@@ -36,7 +36,7 @@ module.exports =
         },
         output: {
             filename: 'bundle.js',
-            path: __dirname + './public',
+            path: __dirname + '/public',
         },
         plugins:
             [
@@ -57,7 +57,7 @@ module.exports =
                     ],
                 }),
                 new MiniCssExtractPlugin({
-                    filename: 'style.css',
+                    filename: './style.css',
                 }),
             ]
     }
