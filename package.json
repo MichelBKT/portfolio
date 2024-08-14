@@ -309,8 +309,9 @@
     "yocto-queue": "^1.1.1"
   },
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack --config webpack.prod.js"
+    "start": "node server.js",
+    "build": "webpack --config webpack.prod.js",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
