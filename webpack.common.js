@@ -1,6 +1,8 @@
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const path = require('path');
+
 
 module.exports =
     {
@@ -32,6 +34,26 @@ module.exports =
                 },
             ]
         },
+        optimization: {
+            minimize: true,
+            minimizer: [
+                new CssMinimizerPlugin({
+                    minimizerOptions: {
+                        preset: [
+                            "default",
+                            {
+                                discardComments: {removeAll: true},
+                            },
+                        ],
+                        minimize: true,
+                        minimizer: [
+                            new CssMinimizerPlugin({
+                                minify: CssMinimizerPlugin.cleanCssMinify,
+                            },)
+                        ]
+                    },
+                })],
+        },
         resolve: {
             extensions: ['.*', '.js']
         },
@@ -44,7 +66,7 @@ module.exports =
                 directory: path.join(__dirname, 'public'),
             },
             compress: true,
-            port: 9000,
+            port: 8080,
     },
         plugins:
             [
