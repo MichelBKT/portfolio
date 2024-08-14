@@ -38,6 +38,9 @@ module.exports =
             filename: 'bundle.js',
             path: __dirname + '/public',
         },
+        devServer: {
+            static: './public',
+        },
         plugins:
             [
                 new CopyPlugin({

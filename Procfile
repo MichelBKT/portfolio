@@ -1,1 +1,1 @@
-web:webpack serve --config webpack.dev.js
+web: webpack serve --config webpack.prod.js
