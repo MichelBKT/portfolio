@@ -1,5 +1,6 @@
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
 
 module.exports =
     {
@@ -39,8 +40,12 @@ module.exports =
             path: __dirname + '/public',
         },
         devServer: {
-            static: './public',
-        },
+            static: {
+                directory: path.join(__dirname, 'public'),
+            },
+            compress: true,
+            port: 9000,
+    },
         plugins:
             [
                 new CopyPlugin({
