@@ -1,1 +1,1 @@
-web:npm start
+web:webpack serve --config webpack.dev.js
