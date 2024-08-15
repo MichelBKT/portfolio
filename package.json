@@ -1,7 +1,7 @@
 {
-  "name": "my-webpack-project",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "My webpack project",
+  "description": "Portfolio de Michel Banckaert",
   "engines": {
     "node": "20.x",
     "npm": "10.x"
@@ -305,7 +305,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "webpack --mode=production --node-env=production",
+    "build": "webpack build --config ./webpack.prod.js",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
