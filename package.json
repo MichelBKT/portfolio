@@ -40,6 +40,7 @@
     "chalk": "^2.4.2",
     "chokidar": "^3.6.0",
     "chrome-trace-event": "^1.0.4",
+    "cjs-loader": "^0.1.0",
     "clone-deep": "^4.0.1",
     "color-convert": "^2.0.1",
     "color-name": "^1.1.4",
