@@ -7,7 +7,7 @@ const path = require('path');
 module.exports =
     {
         entry: {
-            bundle: './src/index.js'
+            bundle: './index.js'
         },
         module: {
             rules: [
@@ -60,25 +60,29 @@ module.exports =
         },
         output: {
             filename: 'bundle.js',
-            path: __dirname + './public',
+            path: path.resolve(__dirname, './public'),
         },
-        devServer: {
+       devServer: {
             static: {
-                directory: path.join(__dirname, './public'),
+               directory: path.join(__dirname, './public'),
             },
             compress: true,
             port: 8080,
-    },
+       },
+        performance: {
+            hints: false
+        },
+        devtool: 'inline-source-map',
         plugins:
             [
                 new CopyPlugin({
                     patterns: [
                         {
-                            from: "./images",
+                            from: "./asset/images",
                             to: "./images/[path][name][ext]",
                         },
                         {
-                            from: "./fonts",
+                            from: "./asset/fonts",
                             to: "./fonts/[path][name][ext]",
                         },
                         {

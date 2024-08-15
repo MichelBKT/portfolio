@@ -6,7 +6,7 @@
     "node": "20.x",
     "npm": "10.x"
   },
-  "main": "/app/server.js",
+  "main": "./public/bundle.js",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -306,11 +306,7 @@
   },
   "scripts": {
     "start": "node app/server.js",
-    "build": "webpack build --config ./webpack.prod.js",
-    "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "build": "webpack build --config webpack.config.js"
   },
   "keywords": [],
   "author": "",

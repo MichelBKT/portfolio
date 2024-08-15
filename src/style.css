@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'AlphaLyrae';
-    src: url(../public/fonts/AlphaLyrae-Medium.woff2) format('woff2'),
-    url(../public/fonts/AlphaLyrae-Medium.woff) format('woff');
+    src: url(../asset/fonts/AlphaLyrae-Medium.woff2) format('woff2'),
+    url(../asset/fonts/AlphaLyrae-Medium.woff) format('woff');
     font-style: normal;
 }
     /* http://meyerweb.com/eric/tools/css/reset/
@@ -489,8 +489,10 @@
         margin-top: 10vh;
     }
     .signature {
-        width: 50%;
+        width: 40%;
         rotate: -5deg;
+        aspect-ratio: initial;
+        bottom: 10rem;
     }
     @media screen and (min-width: 53em) {
         .header {
@@ -741,7 +743,7 @@
             padding-top: 1rem;
         }
         .signature {
-            width: 70%;
+            width: 80%;
             background-position: 25% -10%;
             background-size: contain;
             background-repeat: no-repeat;
