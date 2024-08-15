@@ -6,7 +6,7 @@
     "node": "20.x",
     "npm": "10.x"
   },
-  "main": "./public/bundle.js",
+  "main": "./server.js",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
