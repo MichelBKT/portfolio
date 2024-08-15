@@ -45,6 +45,7 @@ module.exports = {
       }
     })]
   },
+  mode: 'production',
   resolve: {
     extensions: ['.*', '.js']
   },
