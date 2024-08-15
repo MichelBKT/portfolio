@@ -6,7 +6,7 @@
     "node": "20.x",
     "npm": "10.x"
   },
-  "main": "./server.js",
+  "main": "app/server.js",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -304,7 +304,7 @@
     "yocto-queue": "^1.1.1"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node app/server.js",
     "build": "webpack build --config ./webpack.prod.js",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
