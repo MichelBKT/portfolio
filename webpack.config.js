@@ -61,6 +61,7 @@ module.exports =
         output: {
             filename: 'bundle.js',
             path: path.resolve(__dirname, './public'),
+            publicPath: 'auto',
         },
        devServer: {
             static: {
