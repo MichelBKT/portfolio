@@ -302,7 +302,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "webpack build --config webpack.config.js"
+    "build": "webpack build --config app/webpack.config.js"
   },
   "keywords": [],
   "author": "",
