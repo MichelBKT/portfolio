@@ -301,7 +301,7 @@
     "yocto-queue": "^1.1.1"
   },
   "scripts": {
-    "start": "node ./server.js",
+    "start": "node server.js",
     "build": "webpack build --config webpack.config.js"
   },
   "keywords": [],
