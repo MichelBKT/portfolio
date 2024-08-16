@@ -8,11 +8,17 @@ function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" 
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 var Webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
+var express = require('express');
+var app = express();
 var webpackConfig = require('./webpack.config.js');
+var path = require("node:path");
 var compiler = Webpack(webpackConfig);
 var devServerOptions = _objectSpread(_objectSpread({}, webpackConfig.devServer), {}, {
   open: true
 });
 var server = new WebpackDevServer(devServerOptions, compiler);
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 server.startCallback(function () {});
 //# sourceMappingURL=server.js.map

@@ -9,7 +9,7 @@ module.exports =
     {
         mode: 'production',
         entry: {
-            bundle: './index.js'
+            bundle: './index.js',
         },
         module: {
             rules: [
