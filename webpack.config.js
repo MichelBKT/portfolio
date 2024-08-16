@@ -2,10 +2,12 @@ const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const path = require('path');
-
+const ASSET_PATH = process.env.ASSET_PATH || '/';
+const webpack = require('webpack');
 
 module.exports =
     {
+        mode: 'production',
         entry: {
             bundle: './index.js'
         },
@@ -14,6 +16,7 @@ module.exports =
                 {
                     test: /\.(js|cjs|mjs|ts)$/,
                     exclude: /node_modules/,
+                    include: path.resolve(__dirname, 'src'),
                     use: {
                         loader: 'babel-loader',
                         options: {
@@ -35,6 +38,7 @@ module.exports =
             ]
         },
         optimization: {
+            nodeEnv: 'production',
             minimize: true,
             minimizer: [
                 new CssMinimizerPlugin({
@@ -54,14 +58,13 @@ module.exports =
                     },
                 })],
         },
-        mode: 'production',
         resolve: {
             extensions: ['.*', '.js']
         },
         output: {
             filename: 'bundle.js',
             path: path.resolve(__dirname, './public'),
-            publicPath: 'auto',
+            publicPath: ASSET_PATH,
         },
        devServer: {
             static: {
@@ -94,6 +97,9 @@ module.exports =
                 }),
                 new MiniCssExtractPlugin({
                     filename: './style.css',
+                }),
+                new webpack.DefinePlugin({
+                    'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
                 }),
             ]
     }
