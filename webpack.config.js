@@ -38,7 +38,6 @@ module.exports =
             ]
         },
         optimization: {
-            nodeEnv: 'production',
             minimize: true,
             minimizer: [
                 new CssMinimizerPlugin({
@@ -101,5 +100,12 @@ module.exports =
                 new webpack.DefinePlugin({
                     'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
                 }),
+                new webpack.EnvironmentPlugin(
+                    {
+                        NODE_ENV: 'production', // use 'development' unless process.env.NODE_ENV is defined
+                        DEBUG: false,
+                    }
+                ),
+
             ]
     }
