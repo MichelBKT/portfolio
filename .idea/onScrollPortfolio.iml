@@ -5,11 +5,11 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/dist/build/images" />
+      <excludeFolder url="file://$MODULE_DIR$/app/dist/build/images" />
     </content>
-    <content url="file://$MODULE_DIR$/dist" />
-    <content url="file://$MODULE_DIR$/dist/build/images" />
-    <content url="file://$MODULE_DIR$/node_modules/lenis" />
+    <content url="file://$MODULE_DIR$/app/dist" />
+    <content url="file://$MODULE_DIR$/app/dist/build/images" />
+    <content url="file://$MODULE_DIR$/app/node_modules/lenis" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
